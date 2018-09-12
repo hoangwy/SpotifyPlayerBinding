@@ -1,0 +1,4 @@
+com.spotify.sdk.android.player.Error:Com.Spotify.Sdk.Android.Player:Error
+com.spotify.sdk.android.player.PlaybackBitrate:Com.Spotify.Sdk.Android.Player:PlaybackBitrate
+com.spotify.sdk.android.player.PlayerEvent:Com.Spotify.Sdk.Android.Player:PlayerEvent
+com.spotify.sdk.android.player.SpotifyPlayer$InitializationState:Com.Spotify.Sdk.Android.Player:SpotifyPlayer.InitializationState

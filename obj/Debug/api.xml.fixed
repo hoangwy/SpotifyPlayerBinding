@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<api>
+  <package name="com.spotify.jni">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="JniHelpersLoader" static="false" visibility="" />
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="NativeObject" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="NativeObject" static="false" type="com.spotify.jni.NativeObject" visibility="public"></constructor>
+      <method abstract="true" deprecated="not deprecated" final="false" name="destroy" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <field deprecated="not deprecated" final="false" name="nPtr" static="false" transient="false" type="long" type-generic-aware="long" visibility="protected" volatile="false"></field>
+    </class>
+  </package>
+  <package name="com.spotify.jni.annotations">
+    <interface abstract="true" deprecated="not deprecated" final="false" name="UsedByNativeCode" static="false" visibility="public">
+      <implements name="java.lang.annotation.Annotation" name-generic-aware="java.lang.annotation.Annotation"></implements>
+    </interface>
+  </package>
+  <package name="com.spotify.sdk.android.player">
+    <interface abstract="true" deprecated="not deprecated" final="false" name="AudioController" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onAudioDataDelivered" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="short[]"></parameter>
+        <parameter name="p1" type="int"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onAudioFlush" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onAudioPaused" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onAudioResumed" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="start" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudioRingBuffer" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="AudioRingBuffer" static="false" type="com.spotify.sdk.android.player.AudioRingBuffer" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="true" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="peek" native="false" return="int" static="false" synchronized="true" visibility="public">
+        <parameter name="p0" type="short[]"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="true" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="write" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="short[]"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="write" native="false" return="int" static="false" synchronized="true" visibility="public">
+        <parameter name="p0" type="short[]"></parameter>
+        <parameter name="p1" type="int"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudioTrackController" static="false" visibility="">
+      <implements name="com.spotify.sdk.android.player.AudioController" name-generic-aware="com.spotify.sdk.android.player.AudioController"></implements>
+      <constructor deprecated="not deprecated" final="false" name="AudioTrackController" static="false" type="com.spotify.sdk.android.player.AudioTrackController" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAudioDataDelivered" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="short[]"></parameter>
+        <parameter name="p1" type="int"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAudioFlush" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAudioPaused" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAudioResumed" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="start" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AudioTrackController.1" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="com.spotify.sdk.android.player.BuildConfig" visibility="public"></constructor>
+      <field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.spotify.sdk.android.player&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="-1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Config" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Config" static="false" type="com.spotify.sdk.android.player.Config" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+        <parameter name="p1" type="java.lang.String"></parameter>
+        <parameter name="p2" type="java.lang.String"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Config" static="false" type="com.spotify.sdk.android.player.Config" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+        <parameter name="p1" type="java.lang.String"></parameter>
+        <parameter name="p2" type="java.lang.String"></parameter>
+        <parameter name="p3" type="com.spotify.sdk.android.player.Config.DeviceType"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldUseCache" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="useCache" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="IN_FIELD_SEPARATOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;_&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="brandName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="cacheAgeLimitInSeconds" static="false" transient="false" type="int" type-generic-aware="int" value="604800" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="cachePath" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="cacheSizeLimitInMegabytes" static="false" transient="false" type="int" type-generic-aware="int" value="1024" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="clientId" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="false" name="displayName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="modelName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="oauthToken" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="osVersion" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="uniqueId" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Config.DeviceType" static="true" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Config.DeviceType" static="false" type="com.spotify.sdk.android.player.Config.DeviceType" visibility="public"></constructor>
+      <field deprecated="not deprecated" final="true" name="AVR" static="true" transient="false" type="com.spotify.sdk.android.player.Config.DeviceType" type-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="COMPUTER" static="true" transient="false" type="com.spotify.sdk.android.player.Config.DeviceType" type-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="DONGLE" static="true" transient="false" type="com.spotify.sdk.android.player.Config.DeviceType" type-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SMARTPHONE" static="true" transient="false" type="com.spotify.sdk.android.player.Config.DeviceType" type-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SPEAKER" static="true" transient="false" type="com.spotify.sdk.android.player.Config.DeviceType" type-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="STB" static="true" transient="false" type="com.spotify.sdk.android.player.Config.DeviceType" type-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="TABLET" static="true" transient="false" type="com.spotify.sdk.android.player.Config.DeviceType" type-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="TV" static="true" transient="false" type="com.spotify.sdk.android.player.Config.DeviceType" type-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="UNKNOWN" static="true" transient="false" type="com.spotify.sdk.android.player.Config.DeviceType" type-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Config.DeviceType" extends-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" final="false" name="Config.DeviceType.1" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Config.DeviceType" extends-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" final="false" name="Config.DeviceType.2" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Config.DeviceType" extends-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" final="false" name="Config.DeviceType.3" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Config.DeviceType" extends-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" final="false" name="Config.DeviceType.4" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Config.DeviceType" extends-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" final="false" name="Config.DeviceType.5" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Config.DeviceType" extends-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" final="false" name="Config.DeviceType.6" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Config.DeviceType" extends-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" final="false" name="Config.DeviceType.7" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Config.DeviceType" extends-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" final="false" name="Config.DeviceType.8" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Config.DeviceType" extends-generic-aware="com.spotify.sdk.android.player.Config.DeviceType" final="false" name="Config.DeviceType.9" static="true" visibility="" />
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ConnectionStateCallback" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onConnectionMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onLoggedIn" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onLoggedOut" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onLoginFailed" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Error"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onTemporaryError" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Connectivity" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Connectivity" static="false" type="com.spotify.sdk.android.player.Connectivity" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="fromNetworkType" native="false" return="com.spotify.sdk.android.player.Connectivity" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="MOBILE" static="true" transient="false" type="com.spotify.sdk.android.player.Connectivity" type-generic-aware="com.spotify.sdk.android.player.Connectivity" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="OFFLINE" static="true" transient="false" type="com.spotify.sdk.android.player.Connectivity" type-generic-aware="com.spotify.sdk.android.player.Connectivity" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="WIRED" static="true" transient="false" type="com.spotify.sdk.android.player.Connectivity" type-generic-aware="com.spotify.sdk.android.player.Connectivity" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="WIRELESS" static="true" transient="false" type="com.spotify.sdk.android.player.Connectivity" type-generic-aware="com.spotify.sdk.android.player.Connectivity" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Connectivity" extends-generic-aware="com.spotify.sdk.android.player.Connectivity" final="false" name="Connectivity.1" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Connectivity" extends-generic-aware="com.spotify.sdk.android.player.Connectivity" final="false" name="Connectivity.2" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Connectivity" extends-generic-aware="com.spotify.sdk.android.player.Connectivity" final="false" name="Connectivity.3" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.Connectivity" extends-generic-aware="com.spotify.sdk.android.player.Connectivity" final="false" name="Connectivity.4" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.spotify.sdk.android.player.Error&gt;" final="true" name="Error" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.spotify.sdk.android.player.Error" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.spotify.sdk.android.player.Error[]" static="true" synchronized="false" visibility="public"></method>
+      <field deprecated="not deprecated" final="true" name="UNKNOWN" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpAlreadyPrefetching" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorAPIRateLimited" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorAdIsPlaying" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorAlreadyInitialized" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorApplicationBanned" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorContextFailed" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorCorruptTrack" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorFailed" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorGeneralLoginError" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorGeneralPlaybackError" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorInitFailed" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorInvalidArgument" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorLoginBadCredentials" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorNeedsPremium" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorNotActiveDevice" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorNullArgument" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorOk" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorPlaybackCappingLimitReached" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorPlaybackErrorStart" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorPlaybackRateLimited" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorPrefetchItemUnavailable" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorTravelRestriction" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorUninitialized" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorUnsupported" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpErrorWrongAPIVersion" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPrefetchDownloadFailed" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpStorageReadError" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpStorageWriteError" static="true" transient="false" type="com.spotify.sdk.android.player.Error" type-generic-aware="com.spotify.sdk.android.player.Error" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Metadata" static="false" visibility="public">
+      <implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+      <constructor deprecated="not deprecated" final="false" name="Metadata" static="false" type="com.spotify.sdk.android.player.Metadata" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+        <parameter name="p1" type="java.lang.String"></parameter>
+        <parameter name="p2" type="com.spotify.sdk.android.player.Metadata.Track"></parameter>
+        <parameter name="p3" type="com.spotify.sdk.android.player.Metadata.Track"></parameter>
+        <parameter name="p4" type="com.spotify.sdk.android.player.Metadata.Track"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Metadata" static="false" type="com.spotify.sdk.android.player.Metadata" visibility="protected">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="writeToParcel" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+        <parameter name="p1" type="int"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="CREATOR" static="true" transient="false" type="android.os.Parcelable.Creator" type-generic-aware="android.os.Parcelable.Creator&lt;com.spotify.sdk.android.player.Metadata&gt;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="contextName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="contextUri" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="currentTrack" static="false" transient="false" type="com.spotify.sdk.android.player.Metadata.Track" type-generic-aware="com.spotify.sdk.android.player.Metadata.Track" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="nextTrack" static="false" transient="false" type="com.spotify.sdk.android.player.Metadata.Track" type-generic-aware="com.spotify.sdk.android.player.Metadata.Track" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="prevTrack" static="false" transient="false" type="com.spotify.sdk.android.player.Metadata.Track" type-generic-aware="com.spotify.sdk.android.player.Metadata.Track" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Metadata.1" static="true" visibility="">
+      <implements name="android.os.Parcelable.Creator" name-generic-aware="android.os.Parcelable.Creator&lt;com.spotify.sdk.android.player.Metadata&gt;"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="com.spotify.sdk.android.player.Metadata" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="com.spotify.sdk.android.player.Metadata[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Metadata.Track" static="true" visibility="public">
+      <implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+      <constructor deprecated="not deprecated" final="false" name="Metadata.Track" static="false" type="com.spotify.sdk.android.player.Metadata.Track" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+        <parameter name="p1" type="java.lang.String"></parameter>
+        <parameter name="p2" type="java.lang.String"></parameter>
+        <parameter name="p3" type="java.lang.String"></parameter>
+        <parameter name="p4" type="java.lang.String"></parameter>
+        <parameter name="p5" type="java.lang.String"></parameter>
+        <parameter name="p6" type="long"></parameter>
+        <parameter name="p7" type="long"></parameter>
+        <parameter name="p8" type="java.lang.String"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Metadata.Track" static="false" type="com.spotify.sdk.android.player.Metadata.Track" visibility="protected">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="writeToParcel" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+        <parameter name="p1" type="int"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="CREATOR" static="true" transient="false" type="android.os.Parcelable.Creator" type-generic-aware="android.os.Parcelable.Creator&lt;com.spotify.sdk.android.player.Metadata.Track&gt;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="albumCoverWebUrl" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="albumName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="albumUri" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="artistName" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="artistUri" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="durationMs" static="false" transient="false" type="long" type-generic-aware="long" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="indexInContext" static="false" transient="false" type="long" type-generic-aware="long" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="name" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="uri" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Metadata.Track.1" static="true" visibility="">
+      <implements name="android.os.Parcelable.Creator" name-generic-aware="android.os.Parcelable.Creator&lt;com.spotify.sdk.android.player.Metadata.Track&gt;"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="com.spotify.sdk.android.player.Metadata.Track" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="com.spotify.sdk.android.player.Metadata.Track[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.spotify.sdk.android.player.PlaybackBitrate&gt;" final="true" name="PlaybackBitrate" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.spotify.sdk.android.player.PlaybackBitrate" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.spotify.sdk.android.player.PlaybackBitrate[]" static="true" synchronized="false" visibility="public"></method>
+      <field deprecated="not deprecated" final="true" name="BITRATE_HIGH" static="true" transient="false" type="com.spotify.sdk.android.player.PlaybackBitrate" type-generic-aware="com.spotify.sdk.android.player.PlaybackBitrate" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BITRATE_LOW" static="true" transient="false" type="com.spotify.sdk.android.player.PlaybackBitrate" type-generic-aware="com.spotify.sdk.android.player.PlaybackBitrate" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BITRATE_NORMAL" static="true" transient="false" type="com.spotify.sdk.android.player.PlaybackBitrate" type-generic-aware="com.spotify.sdk.android.player.PlaybackBitrate" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PlaybackState" static="false" visibility="public">
+      <implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+      <constructor deprecated="not deprecated" final="false" name="PlaybackState" static="false" type="com.spotify.sdk.android.player.PlaybackState" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+        <parameter name="p2" type="boolean"></parameter>
+        <parameter name="p3" type="boolean"></parameter>
+        <parameter name="p4" type="long"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="PlaybackState" static="false" type="com.spotify.sdk.android.player.PlaybackState" visibility="protected">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="writeToParcel" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+        <parameter name="p1" type="int"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="CREATOR" static="true" transient="false" type="android.os.Parcelable.Creator" type-generic-aware="android.os.Parcelable.Creator&lt;com.spotify.sdk.android.player.PlaybackState&gt;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="isActiveDevice" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="isPlaying" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="isRepeating" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="isShuffling" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="positionMs" static="false" transient="false" type="long" type-generic-aware="long" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PlaybackState.1" static="true" visibility="">
+      <implements name="android.os.Parcelable.Creator" name-generic-aware="android.os.Parcelable.Creator&lt;com.spotify.sdk.android.player.PlaybackState&gt;"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="com.spotify.sdk.android.player.PlaybackState" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="com.spotify.sdk.android.player.PlaybackState[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Player" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="addConnectionStateCallback" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.ConnectionStateCallback"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="addNotificationCallback" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.NotificationCallback"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="destroy" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getMetadata" native="false" return="com.spotify.sdk.android.player.Metadata" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getPlaybackState" native="false" return="com.spotify.sdk.android.player.PlaybackState" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="initialize" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Config"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="login" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="logout" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="pause" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="playUri" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="java.lang.String"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="queue" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="java.lang.String"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="refreshCache" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="removeConnectionStateCallback" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.ConnectionStateCallback"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="removeNotificationCallback" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.NotificationCallback"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="resume" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="seekToPosition" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="int"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setConnectivityStatus" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="com.spotify.sdk.android.player.Connectivity"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setPlaybackBitrate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="com.spotify.sdk.android.player.PlaybackBitrate"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setRepeat" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setShuffle" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="skipToNext" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="skipToPrevious" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Player.AudioDeliveredCallback" static="true" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onAudioDelivered" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="short[]"></parameter>
+        <parameter name="p1" type="int"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Player.AudioFlushCallback" static="true" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onAudioFlush" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Player.NotificationCallback" static="true" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onPlaybackError" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Error"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onPlaybackEvent" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.PlayerEvent"></parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Player.OperationCallback" static="true" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onError" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Error"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onSuccess" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.spotify.sdk.android.player.PlayerEvent&gt;" final="true" name="PlayerEvent" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.spotify.sdk.android.player.PlayerEvent" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.spotify.sdk.android.player.PlayerEvent[]" static="true" synchronized="false" visibility="public"></method>
+      <field deprecated="not deprecated" final="true" name="UNKNOWN" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackEventAudioFlush" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyAudioDeliveryDone" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyBecameActive" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyBecameInactive" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyContextChanged" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyLostPermission" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyMetadataChanged" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyNext" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyPause" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyPlay" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyPrev" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyRepeatOff" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyRepeatOn" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyShuffleOff" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyShuffleOn" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyTrackChanged" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="kSpPlaybackNotifyTrackDelivered" static="true" transient="false" type="com.spotify.sdk.android.player.PlayerEvent" type-generic-aware="com.spotify.sdk.android.player.PlayerEvent" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" final="false" name="PlayerInitializationException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="PlayerInitializationException" static="false" type="com.spotify.sdk.android.player.PlayerInitializationException" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="PlayerInitializationException" static="false" type="com.spotify.sdk.android.player.PlayerInitializationException" visibility="public">
+        <parameter name="p0" type="java.lang.Throwable"></parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Spotify" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="awaitDestroyPlayer" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object"></parameter>
+        <parameter name="p1" type="long"></parameter>
+        <parameter name="p2" type="java.util.concurrent.TimeUnit"></parameter>
+        <exception name="InterruptedException" type="java.lang.InterruptedException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="destroyPlayer" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPlayer" native="false" return="com.spotify.sdk.android.player.SpotifyPlayer" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Config"></parameter>
+        <parameter name="p1" type="java.lang.Object"></parameter>
+        <parameter name="p2" type="com.spotify.sdk.android.player.SpotifyPlayer.InitializationObserver"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPlayer" native="false" return="com.spotify.sdk.android.player.SpotifyPlayer" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.SpotifyPlayer.Builder"></parameter>
+        <parameter name="p1" type="java.lang.Object"></parameter>
+        <parameter name="p2" type="com.spotify.sdk.android.player.SpotifyPlayer.InitializationObserver"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getReferenceCount" native="false" return="int" static="true" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.jni.NativeObject" extends-generic-aware="com.spotify.jni.NativeObject" final="true" name="SpotifyPlayer" static="false" visibility="public">
+      <implements name="com.spotify.sdk.android.player.Player" name-generic-aware="com.spotify.sdk.android.player.Player"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addConnectionStateCallback" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.ConnectionStateCallback"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addNotificationCallback" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.NotificationCallback"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="create" native="false" return="com.spotify.sdk.android.player.SpotifyPlayer" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Config"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="create" native="false" return="com.spotify.sdk.android.player.SpotifyPlayer" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Config"></parameter>
+        <parameter name="p1" type="com.spotify.sdk.android.player.SpotifyPlayer.InitializationObserver"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="destroy" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMetadata" native="false" return="com.spotify.sdk.android.player.Metadata" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPlaybackState" native="false" return="com.spotify.sdk.android.player.PlaybackState" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="initialize" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Config"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isInitialized" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isLoggedIn" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isShutdown" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isTerminated" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="login" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="logout" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAudioDelivered" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="short[]"></parameter>
+        <parameter name="p1" type="int"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAudioFlush" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="pause" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="playUri" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="java.lang.String"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="queue" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="java.lang.String"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="refreshCache" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removeConnectionStateCallback" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.ConnectionStateCallback"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removeNotificationCallback" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.NotificationCallback"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="resume" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="seekToPosition" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setConnectivityStatus" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="com.spotify.sdk.android.player.Connectivity"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPlaybackBitrate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="com.spotify.sdk.android.player.PlaybackBitrate"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setRepeat" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setShuffle" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shutdown" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="skipToNext" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="skipToPrevious" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Player.OperationCallback"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="SpotifyPlayer.1" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.10" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.10.1" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.11" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.11.1" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.12" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.12.1" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.13" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.13.1" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.14" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.15" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.16" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.17" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.18" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.19" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.2" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.20" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.21" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.22" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.23" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.24" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.25" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.26" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.3" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.4" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.5" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.6" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.7" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.spotify.sdk.android.player.SpotifyPlayer.Command" extends-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.Command" final="false" name="SpotifyPlayer.8" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="call" native="false" return="com.spotify.sdk.android.player.Error" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.9" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.9.1" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.Builder" static="true" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="SpotifyPlayer.Builder" static="false" type="com.spotify.sdk.android.player.SpotifyPlayer.Builder" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.Config"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="build" native="false" return="com.spotify.sdk.android.player.SpotifyPlayer" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="build" native="false" return="com.spotify.sdk.android.player.SpotifyPlayer" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.SpotifyPlayer.InitializationObserver"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAudioController" native="false" return="com.spotify.sdk.android.player.SpotifyPlayer.Builder" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.AudioController"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCallbackHandler" native="false" return="com.spotify.sdk.android.player.SpotifyPlayer.Builder" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Handler"></parameter>
+      </method>
+    </class>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SpotifyPlayer.Command" static="true" visibility="">
+      <implements name="java.util.concurrent.Callable" name-generic-aware="java.util.concurrent.Callable&lt;com.spotify.sdk.android.player.Error&gt;"></implements>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="SpotifyPlayer.InitializationObserver" static="true" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onError" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Throwable"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onInitialized" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.spotify.sdk.android.player.SpotifyPlayer"></parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.spotify.sdk.android.player.SpotifyPlayer.InitializationState&gt;" final="true" name="SpotifyPlayer.InitializationState" static="true" visibility="">
+      <field deprecated="not deprecated" final="true" name="INITIALIZED" static="true" transient="false" type="com.spotify.sdk.android.player.SpotifyPlayer.InitializationState" type-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.InitializationState" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="PENDING" static="true" transient="false" type="com.spotify.sdk.android.player.SpotifyPlayer.InitializationState" type-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.InitializationState" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="TERMINATED" static="true" transient="false" type="com.spotify.sdk.android.player.SpotifyPlayer.InitializationState" type-generic-aware="com.spotify.sdk.android.player.SpotifyPlayer.InitializationState" visibility="public" volatile="false"></field>
+    </class>
+  </package>
+</api>

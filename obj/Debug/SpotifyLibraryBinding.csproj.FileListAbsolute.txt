@@ -1,0 +1,6 @@
+C:\Data\Private\Apollo Xamarin\SpotifyLibraryBinding\bin\Debug\SpotifyLibraryBinding.dll
+C:\Data\Private\Apollo Xamarin\SpotifyLibraryBinding\bin\Debug\SpotifyLibraryBinding.pdb
+C:\Data\Private\Apollo Xamarin\SpotifyLibraryBinding\obj\Debug\SpotifyLibraryBinding.csprojAssemblyReference.cache
+C:\Data\Private\Apollo Xamarin\SpotifyLibraryBinding\obj\Debug\SpotifyLibraryBinding.csproj.CoreCompileInputs.cache
+C:\Data\Private\Apollo Xamarin\SpotifyLibraryBinding\obj\Debug\SpotifyLibraryBinding.dll
+C:\Data\Private\Apollo Xamarin\SpotifyLibraryBinding\obj\Debug\SpotifyLibraryBinding.pdb
